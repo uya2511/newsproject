@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <style>
+            .pad{
+                background-color: lavender;
+                border: solid 2px;
+                padding-top: 30px;
+                padding-bottom: 50;
+                padding-left: 100;
+                margin-top: 50px;
+                margin-right: 70px;
+                margin-left: 70px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="pad">
+            <h2>Top news</h2>
+            <h4>
+                新しいパスワードを二回入力してください。これにより、
+                正しく入力できたことが確認されます。
+            </h4>
+            <by />
+            <form action="" method="POST">
+                {% csrt_token %}
+                {{form}}
+                <input type="submit" value="パスワードをリセット"/>
+            </form>
+        </div>
+    </body>
+</html>
